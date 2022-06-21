@@ -1,0 +1,21 @@
+name : simple workflow example
+
+on: [push]
+
+jobs:
+  build:
+    name: Greet
+    runs-on: ubuntu-latest
+    steps:
+      - name : first achievement
+        run  : welcome gokulapriyan
+
+  time:
+    name : print date
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - run : echo "it is $(date)"
+
+
