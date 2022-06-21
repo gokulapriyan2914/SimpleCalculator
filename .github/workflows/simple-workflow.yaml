@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : first achievement
-        run  : welcome gokulapriyan
+        run  : echo welcome gokulapriyan
 
   time:
     name : print date
