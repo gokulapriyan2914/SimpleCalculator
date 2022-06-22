@@ -3,7 +3,7 @@ on   : [push]
 jobs:
   build-and-test:
     name: Build and run tests
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name : checkout current repository to ubuntu file system
         uses : actions/checkout@v1
@@ -13,9 +13,6 @@ jobs:
           java-version : 1.8
       - name : print contents in current directory
         run  : ls -la
-
-      - name: Run Unit Tests
-        run: ./gradlew testDebugUnitTest
 
       - name: Run instrumentation tests
         uses: reactivecircus/android-emulator-runner@v2
